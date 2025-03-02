@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <style>
+        body {
+            background: #ffff;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 380px;
+        }
+
+        .login-card {
+            background: #f4f6f7;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        input, select {
+            border-radius: 8px;
+            padding: 12px;
+        }
+
+        button {
+            border-radius: 8px;
+            font-size: 16px;
+        }
+    </style>
+    <title>Login | Aplikasi Kasir</title>
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100 bg-light">
+    <div class="login-container">
+        <div class="login-card p-4">
+            <div class="text-center">
+                <img src="img/logo.png" alt="logo" width="80px" mb-1>
+                <h4 class="fw-bold text-dark">Welcome</h4>
+                <p class="text-muted mb-3">Masuk ke akun</p>
+            </div>
+            <form action="proses_login.php" method="post">
+                <div class="mb-3">
+                    <input type="text" id="username" name="username" class="form-control" placeholder="Username" required>
+                </div>
+                <div class="mb-3">
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+                </div>
+                <div class="mb-3">
+                    <select name="role" id="role" class="form-select">
+                        <option>-- Pilih Role --</option>
+                        <option value="administrator">Administrator</option>
+                        <option value="petugas">Petugas</option>
+                    </select>
+                </div>
+                <button type="submit" name="login" class="btn btn-warning w-100 py-2">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
